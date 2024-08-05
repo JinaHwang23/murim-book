@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="wih4h=device-wih4h, initial-scale=1.0">
+  <title>무림기본서</title>
+  <link rel="stylesheet" href="./css/substyle.css">
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.0/css/all.css">
+  <script src="./js/jquery-1.12.3.js"></script>
+  <script src="./js/script.js"></script>
+  <script>
+    $(function () {
+      // 모든 h4와 ul를 선택
+      var allh4 = $("h4");
+      var allul = $("ul.acord");
+
+      // 모든 ul를 숨김
+      allul.slideUp(100);
+
+      // 클릭 이벤트 핸들러 설정
+      allh4.click(function () {
+        // 클릭한 h4와 그 다음 ul 선택
+        var clickh4 = $(this);
+        var choiceul = clickh4.next();
+        var icon = clickh4.find(".icon");
+
+        // 선택한 ul가 숨겨져 있으면
+        if (choiceul.css("display") == "none") {
+          // 모든 ul를 숨김
+          allul.slideUp(100);
+          // 클릭한 ul만 펼침
+          choiceul.slideDown(100);
+          // 모든 아이콘에서 회전 클래스를 제거
+          allh4.find(".icon").removeClass("rotate");
+          // 클릭한 h4의 아이콘에 회전 클래스를 추가
+          icon.addClass("rotate");
+        } else {
+          // 이미 열려있는 ul는 닫기
+          choiceul.slideUp(100);
+          // 클릭한 h4의 아이콘에서 회전 클래스를 제거
+          icon.removeClass("rotate");
+        }
+      });
+    });
+
+    // $(function () {
+    //   var allh4 = $("dl.accordion h4");
+    //   var allul = $("dl.accordion ul");
+    //   allul.slideUp(100); // 0.1초 
+    //   allh4.click(function () {
+    //     var clickh4 = $(this);
+    //     var choiceul = clickh4.next();
+    //     if (choiceul.css("display") == "none") {
+    //       allul.slideUp(100); // 모든 내용 숨김  
+    //       choiceul.slideDown(100); // 클릭한 제목의 다음 요소 내용펼침
+    //     } else {
+    //       choiceul.slideUp(100); // 열려져있을때는 닫아줌 
+    //     }
+    //   });
+    // });
+    // h4,ul 변수저장하고 존재하는 모든ul 숨김
+    // 클릭이 일어난 h4 변수저장
+    // 클릭한 제목 다음에 나오는 내용 ul 변수저장
+    // if문을 통해, 클릭한 내용이 숨겨져 있는지 확인
+    // 클릭한 제목의 내용 펼침 
+    // 열려져있을때는 닫아줌 
+  </script>
+</head>
+
+<body>
+  <div id="wrap">
+    <header>
+      <h1 class="logo"><a href="./index.html"><img src="./images/logo.png" alt="로고"></a></h1>
+      <nav class="menu">
+        <ul class="mainmenu">
+          <li><a href="#">정파 - 구파일방</a>
+            <ul class="submenu">
+              <li><a href="#">소림파</a></li>
+              <li><a href="#">무당파</a></li>
+              <li><a href="#">화산파</a></li>
+              <li><a href="#">아미파</a></li>
+              <li><a href="#">점창파</a></li>
+              <li><a href="#">청성파</a></li>
+              <li><a href="#">공동파</a></li>
+              <li><a href="#">곤륜파</a></li>
+              <li><a href="#">종남파</a></li>
+              <li><a href="#">개방</a></li>
+            </ul>
+          </li>
+          <li><a href="#">정파 - 오대세가</a>
+            <ul class="submenu">
+              <li><a href="#">남궁세가</a></li>
+              <li><a href="#">사천당가</a></li>
+              <li><a href="#">제갈세가</a></li>
+              <li><a href="#">하북팽가</a></li>
+              <li><a href="#">모용세가</a></li>
+            </ul>
+          </li>
+          <li><a href="#">사파</a>
+            <ul class="submenu">
+              <li><a href="#">하오문</a></li>
+              <li><a href="#">녹림</a></li>
+              <li><a href="#">장강수로십팔채</a></li>
+            </ul>
+          </li>
+          <li><a href="#">마교</a>
+            <ul class="submenu">
+              <li><a href="#">천마신교</a></li>
+              <li><a href="#">명교</a></li>
+              <li><a href="#">혈교</a></li>
+            </ul>
+          </li>
+          <li><a href="#">새외사궁</a>
+            <ul class="submenu">
+              <li><a href="#">남만야수궁</a></li>
+              <li><a href="#">북해빙궁</a></li>
+              <li><a href="#">포달랍궁</a></li>
+              <li><a href="#">혈궁</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="wide">
+        <div class="imgbox">
+          <a href="#"><img src="./images/sideimg.png" alt="옆배경"></a>
+        </div>
+        <div class="content">
+          <div class="history">
+            <p>題目. 무협 소설 속 세계관과 세력</p>
+            <h2>▶ 세계관</h2>
+            <p>무협은 중국의 송-원-명으로 이어지는 14-18세기를 배경으로 하여 무공(武功)과 협(俠) 중심으로 전개되는 장르이다.
+              무협에서는 '관무불가침'이라 하여, '관'(황제)과 '무'(무림)이 서로에게 관여하지 않는 불분율이 있다.
+              소설에 따라 다르지만 황실은 무인들이 반역을 꾀하거나 화약에 손을 대지 않는 한, 무인들에게 관의 행정력과 영향력이 미치치 않는 곳을 관리할 권한을 주는 상부상조의 관계로 주로 그려진다.
+              80년대에 중화권 소설가 김용을 중심으로 체계를 갖추었으나 한국에서는 90년대부터 독자적인 신무협이 발전하였고 근래에서는 판타지적 요소가 결합한 새로운 장르가 탄생하였다.</p>
+          </div>
+          <div class="organ">
+            <h2>▶ 세력</h2>
+            <div class="accordion">
+              <h3>정파 (正派)</h3>
+              <p>작중 올바른 행위를 하거나 그런 행동을 요구받는 문파를 가리킨다. 주로 정도와 협의를 추구한다. 문파 내외를 막론하고 예절과 도덕을 강조하는 분위기가 있으며, 위계질서를 중시하는 경향이
+                있다.
+                때문에 정파는 주로 사회의 높은 존경과 대접을 받는 무인이 창설한 사례가 많다. 비슷한 맥락으로 역사가 오래된 문파가 많다. 무협소설에서 주인공이 많이 속해있는 집단이나, 정파의 부패로
+                인한
+                갈등이 소설이 많이 전개된다.</p>
+              <p><span>구파일방 (九派一幇)</span>: 무협물에 나오는 무림의 정파에 속하는 문파들 중 가장 명망이 높은 10개의 문파이자 무협물 세계관에 가장 큰 영향력을 미치는 세력을 말한다. 한국의 무협소설에선 클리셰를 넘어
+                아예
+                상식으로 굳은 수준 정도로 무림세가와도 엮여 자주 사용되는 개념이다.</p>
+              <p><span>오대세가 (五大世家)</span>: 정파에 속하여 무림에 적을 두고, 여러 대를 계속하여 나라의 중요한 자리를 맡아 오거나 특권을 누려 오는 가문을 뜻한다.
+                설정에 따라 명문가의 개수를 자유롭게 묶으나, 보통은 다섯 개의 오대세가의 개념을 가장 많이 차용한다.</p>
+              <h4>구파일방 세력<i class="fa-solid fa-chevron-down icon"></i></h4>
+              <ul class="acord">
+                <li><span>소림사 (少林寺)</span>: 불가 계열의 문파로, 강한 무력을 바탕으로 항상 문파들의 수장으로 묘사된다. 백팔나한권과 소림칠십이종절예로 유명하다.</li>
+                <li><span>무당파 (武當派)</span>: 도가 계열의 문파로, 소림과 함께 강항 문파로 묘사된다. 태극, 원, 부드러움의 묘리를 강조하며 태극혜검으로 유명하다.</li>
+                <li><span>화산파 (華山派)</span>: 도가 계열 문파로, 신무협에서 인기가 많다. 빠르고 정교한 검술이 특화되었으며 이십사수매화검법과 자하신공이 유명하다.</li>
+                <li><span>아미파 (峨嵋派)</span>: 불가 계열의 문파로, 비구니들로 구성되어있다. 문파 사이에서 중간 이상의 무력을 갖는 것으로 묘사된다.</li>
+                <li><span>점창파 (點蒼派)</span>: 찌르는 위주의 검술과 창술에 뛰어나며 고요한 수련을 중시한다. 해를 쏜다는 사일검법이 유명하다.</li>
+                <li><span>청성파 (靑城派)</span>: 도가 계열의 문파로, 강력한 검법을 구사하며, 공격과 방어의 조화에 중점을 둔다. 무협에서 비중이 작은 편이다.</li>
+                <li><span>공동파 (空洞派)</span>: 도가 계열의 문파로, 공동산에 위치하고 있으며 비중이 크게 묘사되지 않는다. 복마검법으로 유명하다.</li>
+                <li><span>곤륜파 (崑崙派)</span>: 서역의 영향을 받아 독특한 무공을 발전시켰다. 지리적으로 마교와 가까워 가장 먼저 멸문되곤 한다.</li>
+                <li><span>종남파 (終南派)</span>: 도가 계열의 문파로, 내공과 외공을 모두 중시하며, 수련생들의 도덕적 수양을 강조한다. 천하삼십육검으로 유명하다.</li>
+                <li><span>개방 (開放)</span>: 거지. 의를 중시하며, 인구가 가장 많고 전국에 퍼져 있어 뛰어난 정보력을 자랑한다. 항룡십팔장으로 유명하다.</li>
+              </ul>
+
+              <h4>오대세가 세력<i class="fa-solid fa-chevron-down icon"></i></h4>
+              <ul class="acord">
+                <li><span>남궁세가 (南宮世家)</span>: 오대세가의 수장이며 가문의 명예를 중시한다. 검술이 뛰어난 것으로 묘사되며 제왕검으로 유명하다.</li>
+                <li><span>사천당가 (四川唐家)</span>: 독과 암기, 의술에 능하다. 교활한 전투 방식이 많이 묘사되며 만천화우로 유명하다.</li>
+                <li><span>제갈세가 (諸葛世家)</span>: 책사나 참모 역할이 많고 병법과 지략에 능하나 무는 다소 부족한 모습을 보인다. 부채를 든 모습이 자주 묘사된다.</li>
+                <li><span>하북팽가 (河北彭家)</span>: 큰 검을 주로 다룬다. 장법, 권각술, 도법이 유명하며 강력한 외공과 체력을 바탕으로 한 무공을 자랑한다.</li>
+                <li><span>모용세가 (慕容世家)</span>: 비중이 크지 않다. 복잡한 음모와 교묘한 전술을 사용하며, 정치적 야망이 크다.</li>
+              </ul>
+              <h3>사파 (邪派)</h3>
+              <p>사파는 독자적인 무공으로 정도보다 힘과 이익을 추구하는 집단이다. 이익을 위해 수단과 방법을 가리지 않는 집단으로 정파와 많이 대립되는 악역으로 묘사되기도 하나,
+                녹림, 강장수로채, 하오문 외에는 뚜렷한 집단이 많지 않아 소설에서 다양한 모습으로 묘사된다.</p>
+              <h4>사파 세력<i class="fa-solid fa-chevron-down icon"></i></h4>
+              <ul class="acord">
+                <li><span>녹림 (綠林)</span>: 산적. 산속에서 산채를 중심으로 약탈을 일삼으며 전국으로 퍼져있다. 주로 주인공 일당에게 응징되는 포지션이다.</li>
+                <li><span>장강수로십팔채 (長江水路十八寨)</span>: 수적. 장강 일대를 무대로 활동하며 18개의 채 아래로 각기 다른 규모의 조직이 구성되어 있다.</li>
+                <li><span>하오문 (黑道)</span>: 점소이, 상인, 대장장이, 기녀 등 하층민이 속한 암흑가를 지배하는 세력으로 비밀스러운 정보와 조직망을 가지고 있다.</li>
+              </ul>
+              <h3>마교 (魔敎)</h3>
+              <p> 십만대산(十萬大山) 혹은 신강의 천산 산맥을 근거지로 하며 마신 또는 천마를 숭배하거나 마공을 익힌 이들이 모인 문파다. 절대적인 권력과 하늘을 거스른다는 역천의 강력한 마공을
+                사용한다.
+                교주를 신처럼 숭배하며 과거 악역 집단이었으나 최근에는 주인공이 속한 힘을 가진 정의로운 집단으로 묘사되기도 한다.</p>
+              <h4>마교 세력<i class="fa-solid fa-chevron-down icon"></i></h4>
+              <ul class="acord">
+                <li><span>천마신교 (天摩新敎)</span>: 마교의 가장 대표적인 집단으로, 교주를 중심으로 엄격한 계급 구조를 가지고 있다.</li>
+                <li><span>명교 (明敎)</span>:국가를 세우는데 기여하였으나 탄압받아 마교가 되었다는 실제 역사를 바탕으로 무협지에서의 마교 설정의 근원이 된다.</li>
+                <li><span>혈교 (血敎)</span>: 마교에서도 비열하고 잔인한 부분을 분리해 신무협에서 새로이 만들어진 집단. 피를 기반으로 한 무공을 사용하는 것으로 묘사된다.</li>
+              </ul>
+              <h3>새외무림 (塞外武林)</h3>
+              <p>중화사상에 의거한 중원의 변방의 무림 세력을 말한다. 남만야수궁, 북해빙궁, 포달랍궁 외에는 소설마다 세력이 다르게 나타난다. 무공을 수련하는 사람이 중국에만 있지는 않고
+                해동(한반도), 동영(일본), 천축(인도), 서장(티벳), 남만(인도차이나 반도), 대막(몽골), 서역(중동 및 서양) 등의 중원 외의 타국에도 그들만의 전통 무공과 그 수련자들이
+                존재한다.
+              </p>
+              <h4>새외무림 세력<i class="fa-solid fa-chevron-down icon"></i></h4>
+              <ul class="acord">
+                <li><span>남만야수궁 (南蠻野獸宮)</span>: 베트남. 남쪽 야만족의 문파로, 동물들과 친화적이며 함께 싸우기도 한다. 야수같은 힘과 잔인한 무공을 사용한다.</li>
+                <li><span>북해빙궁 (北海冰宮)</span>: 러시아. 새외 세력에서 강하게 묘사되며, 북해의 추위를 이용한 강한 음기의 빙공을 구사한다.</li>
+                <li><span>포달랍궁 (婆達剌宮)</span>: 티베트. 서장이라고 불리며, 승려가 많다. 중앙아시아의 영향을 받아 독특한 무공을 가졌다.</li>
+                <li><span>남해태양궁 (南海太陽宮)</span>: 남해의 태양과 바람을 이용한 강한 양기의 무공을 구사한다. 앞의 세 새외궁과 달리 정석이 아니다.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="blogo">
+        <a href="./index.html"><img src="./images/blogo.png" alt="하단로고"></a>
+      </div>
+      <div class="box">
+        <div class="bmenu">
+          <ul>
+            <li><a href="#">이용안내</a></li>
+            <li><a href="#">예약방법</a></li>
+            <li><a href="#">문의사항</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+          </ul>
+        </div>
+        <div class="copyright">
+          <p>Copyright (c) 2024 무림기본서. All Rights Reserved.</p>
+        </div>
+      </div>
+      <div class="sns">
+        <a href="#"><img src="./images/i.png" alt="인스타"></a>
+        <a href="#"><img src="./images/t.png" alt="트위터"></a>
+        <a href="#"><img src="./images/p.png" alt="핀터레스트"></a>
+      </div>
+      <div class="quick-menu">
+        <button class="quick-button" id="button1">
+          질문하기
+        </button>
+        <button class="quick-button" id="button2">
+          수정문의
+        </button>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
